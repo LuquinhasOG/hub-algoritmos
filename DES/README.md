@@ -4,8 +4,8 @@ Este projeto é uma implementação do Data Encryption Standard (DES), segundo e
 
 O executável gerado por este código recebe os seguintes argumentos:
 
-* e: Define que será realizado a opereção de criptografar;
-* d: Define que será realizada a opereção de descriptografar;
+* e: Define que será realizado a operação de criptografar;
+* d: Define que será realizada a operação de descriptografar;
 * -i: Seguido do arquivo de entrada (com extensão);
 * -o: Seguido do arquivo de entrada (com extensão);
 * -gK: Argumento opcional para gerar a chave antes de criptografar.
