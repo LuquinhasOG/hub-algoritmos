@@ -15,3 +15,5 @@ Exemplo 1: ./des.exe e -i lorem-ipsum.txt -o segredo.des -gK
 Exemplo 2: ./des.exe d -i segredo.des -o mensagem.txt
 
 No momento de criptografar e descriptografar é necessario que o arquivo .key esteja no mesmo diretório do arquivo de entrada. Após a operação finalizar, será gerado o arquivo de saída (junto do .key, caso usar o argumento -gK).
+
+(Bug: Se o tamanho do arquivo, em bytes, não for múltiplo de 8, os últimos bytes que sobram não criptografam ou descriptografam corretamente.)
