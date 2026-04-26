@@ -45,11 +45,11 @@ std::string hash_to_hexstr(Hash h);
 
 int main(int argc, char *argv[]) {
     if (argc < 2) {
-        std::cerr << "Passe o caminho do arquivo de texto\n";
-        std::exit(EXIT_FAILURE);
+        std::cerr << "Passe o caminho do arquivo\n";
+        return 1;
     }
 
-    std::string message = read_file(argv[1]); // mensagem que irá se tornar o hash
+    std::string message = read_file(argv[1]); // lê arquivo
 
     // pré-processamento da mensagem
     std::string padded_message = padding_message(message); // mensagem preenchida
@@ -97,7 +97,7 @@ word lower_sig1(word x) {
     return rotr(17, x) ^ rotr(19, x) ^ (x >> 10);
 }
 
-// lê um arquivo txt
+// lê um arquivo
 std::string read_file(std::string path) {
     std::ifstream file(path); // abre o arquivo
     if (!file.is_open()) {
